@@ -28,4 +28,4 @@ Add it to your `$PATH` for extra awesomeness.
 
 GPLv3
 
-[tripleo]: https://tripleo.org
+[tripleo]: http://tripleo.org

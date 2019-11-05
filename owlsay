@@ -18,7 +18,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import textwrap
-import string
 
 OWL = """
      \        ,   .   ,
@@ -41,7 +40,7 @@ def textbox(text, width=60):
     lines = textwrap.wrap(text, width)
 
     for line in lines:
-        line = string.ljust(line, width - 1)
+        line = line.ljust(width - 1)
         r.append('| %s |' % line)
 
     r.append(boundary)
@@ -50,14 +49,14 @@ def textbox(text, width=60):
 
 
 def main(text):
-    print textbox(text)
-    print OWL
+    print(textbox(text))
+    print(OWL)
 
 
 if __name__ == "__main__":
     import sys
     if len(sys.argv) != 2:
-        print 'Usage: owlsay <message>'
+        print('Usage: owlsay <message>')
         sys.exit(1)
 
     main(sys.argv[1])
